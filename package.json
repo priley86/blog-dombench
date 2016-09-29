@@ -1,0 +1,25 @@
+{
+  "name": "blog-dombench",
+  "version": "1.0.0",
+  "description": "",
+  "main": "make-csv.js",
+  "dependencies": {
+    "browser-perf": "git+https://github.com/sebadoom/browser-perf.git",
+    "chromedriver": "^2.24.1",
+    "json2csv": "^3.7.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/priley86/blog-dombench.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/priley86/blog-dombench/issues"
+  },
+  "homepage": "https://github.com/priley86/blog-dombench#readme"
+}
