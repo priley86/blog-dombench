@@ -1,0 +1,59 @@
+<html><head><meta charset="UTF-8">
+  <template class="text-template"><span class="text"></span></template>
+<script>
+  'use strict';
+
+  var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+  function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+  function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+  (function () {
+    var doc = (document._currentScript || document.currentScript).ownerDocument;
+    var textTemplate = doc.querySelector('.text-template');
+
+    var TextComponent = function (_HTMLElement) {
+      _inherits(TextComponent, _HTMLElement);
+
+      function TextComponent() {
+        _classCallCheck(this, TextComponent);
+
+        return _possibleConstructorReturn(this, (TextComponent.__proto__ || Object.getPrototypeOf(TextComponent)).apply(this, arguments));
+      }
+
+      _createClass(TextComponent, [{
+        key: 'attachedCallback',
+        value: function attachedCallback() {
+          this.appendChild(document.importNode(textTemplate.content, true));
+        }
+      }, {
+        key: 'attributeChangedCallback',
+        value: function attributeChangedCallback(attributeName, oldValue, newValue) {
+          var parent = this.parentNode;
+          if (attributeName === 'text') {
+            var span = this.querySelector('.text');
+            if(span) span.innerHTML = newValue;
+          }
+        }
+      }, {
+        key: 'text',
+        get: function get() {
+          return this._text;
+        },
+        set: function set(value) {
+          if (this._text !== value) {
+            this._text = value;
+            this.setAttribute('text', value);
+          }
+        }
+      }]);
+
+      return TextComponent;
+    }(HTMLElement);
+
+    document.registerElement('text-component', TextComponent);
+  })();
+</script></head><body></body></html>
