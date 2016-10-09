@@ -2,7 +2,7 @@
 A benchmark suite for measuring framework rendering performance.
 
 ### Metrics
-dombench uses [browser-perf](https://github.com/axemclion/browser-perf) to gather the following [metrics](https://github.com/axemclion/browser-perf/wiki/Metrics).
+dombench uses [browser-perf](https://github.com/axemclion/browser-perf) to gather the following [metrics](https://github.com/axemclion/browser-perf/wiki/Metrics). This version of browser-perf has also been [modified](https://github.com/sebadoom/browser-perf/commit/e3e093c574e9e49268b3cedcbe407ddd11ae9602) to add memory metrics using Chrome's [window.performance.memory](https://trackjs.com/blog/monitoring-javascript-memory/) extension. 
 
 ### Running the benchmarks
 You will need Python and Chrome Driver to run this suite. The benchmark suite uses a simple python web server to host the application, 
