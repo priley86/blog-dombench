@@ -34,5 +34,5 @@ $ node make-csv.js
 Results are written to `results.csv`. 
 
 ### Samples
-Some sample metrics collected from running the suite on a 2015 Mac Book Pro, 2.5 Ghz Core i7 can be found in [graphs](/graphs) and [result-graphs.numbers](result-graphs.numbers).
+Some sample metrics collected from running the suite on a 2015 Mac Book Pro, 2.5 Ghz Core i7 can be found in [graphs](/graphs) and [results-graphs.numbers](results-graphs.numbers).
 
